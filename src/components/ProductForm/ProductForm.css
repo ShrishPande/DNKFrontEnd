@@ -7,7 +7,10 @@
 }
 
 .Container{
+    height: 82vh;
+    overflow-y: scroll;
     background: rgb(255, 255, 255);
+    box-shadow: 0px 2px 10px 0px #858585;
     padding: 20px 20px;
     border-radius: 0.7rem;
 }

@@ -5,7 +5,7 @@ const ProdForm = () => {
     return (
         <form>
             <div class="mb-2">
-                <label for="exampleInputEmail1" class="form-label">
+                <label for="exampleInputEmail1" class="">
                     Product Name
                 </label>
                 <input
@@ -16,7 +16,7 @@ const ProdForm = () => {
                 />
             </div>
             <div class="mb-2">
-                <label for="exampleInputPassword1" class="form-label">
+                <label for="exampleInputPassword1" class="">
                     Product ID
                 </label>
                 <input
@@ -26,7 +26,7 @@ const ProdForm = () => {
                 />
             </div>
             <div class="mb-2">
-                <label for="exampleInputPassword1" class="form-label">
+                <label for="exampleInputPassword1" class="">
                     Price
                 </label>
                 <input
@@ -37,8 +37,8 @@ const ProdForm = () => {
             </div>
             <div class="row mb-2">
                 <div class="col">
-                    <label for="exampleInputPassword1" class="form-label">
-                        Weight
+                    <label for="exampleInputPassword1" class="">
+                        Weight(in grams)
                     </label>
                     <input
                         type="number"
@@ -47,8 +47,8 @@ const ProdForm = () => {
                     />
                 </div>
                 <div class="col">
-                    <label for="exampleInputPassword1" class="form-label">
-                        Length
+                    <label for="exampleInputPassword1" class="">
+                        Length(in cm)
                     </label>
                     <input
                         type="number"
@@ -57,8 +57,8 @@ const ProdForm = () => {
                     />
                 </div>
                 <div class="col">
-                    <label for="exampleInputPassword1" class="form-label">
-                        Breadth
+                    <label for="exampleInputPassword1" class="">
+                        Breadth(in cm)
                     </label>
                     <input
                         type="number"
@@ -67,8 +67,8 @@ const ProdForm = () => {
                     />
                 </div>
                 <div class="col">
-                    <label for="exampleInputPassword1" class="form-label">
-                        Height
+                    <label for="exampleInputPassword1" class="">
+                        Height(in cm)
                     </label>
                     <input
                         type="number"
@@ -77,7 +77,7 @@ const ProdForm = () => {
                     />
                 </div>
                 <div class="col">
-                    <label for="exampleInputPassword1" class="form-label">
+                    <label for="exampleInputPassword1" class="">
                         Stock quantity
                     </label>
                     <input
@@ -88,7 +88,7 @@ const ProdForm = () => {
                 </div>
             </div>
             <div class="mb-2">
-                <label for="exampleFormControlTextarea1" class="form-label">
+                <label for="exampleFormControlTextarea1" class="">
                     Product Details
                 </label>
                 <textarea
@@ -98,7 +98,7 @@ const ProdForm = () => {
                 ></textarea>
             </div>
             <div class="mb-2">
-                <label for="formFileMultiple" class="form-label">
+                <label for="formFileMultiple" class="">
                     Product Images
                 </label>
                 <input
@@ -108,9 +108,10 @@ const ProdForm = () => {
                     id="formFileMultiple"
                     multiple
                 />
+                <div class="form-text" id="basic-addon4">Only .png , .jpg , .jpeg , .jfif , .pjpeg , .pjp accepted</div>
             </div>
 
-            <button type="submit" class="btn btn-danger">
+            <button type="submit" class="btn btn-danger mt-2">
                 Submit
             </button>
         </form>

@@ -5,7 +5,7 @@ import ProdForm from '../ProdForm/ProdForm'
 const ProductForm = () => {
   return (
     <div className='ProductForm'>
-        <h1>Add product</h1>
+        <h2>Add Product</h2>
         <div className='Container'>
             <ProdForm/>
         </div>

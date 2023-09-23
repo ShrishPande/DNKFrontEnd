@@ -77,6 +77,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
+    padding-bottom: 2rem;
 }
 
 .ExpandedCard>span:nth-of-type(1){
@@ -91,7 +92,7 @@
 }
 
 .chartContainer{
-    width: 70%;
+    width: 50%;
 }
 
 
@@ -106,12 +107,14 @@
 @media screen and (max-width: 768px){
     .ExpandedCard{
         top: 8rem;
-        height: 50%;
+        height: 75%;
         left: 15px;
-        width: 80%;
+        width: 90%;
+        /* justify-content: center; */
+        align-items: center;
     }
 
     .chartContainer{
-        width: 100%;
+        width: 90%;
     }
 }

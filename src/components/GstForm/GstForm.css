@@ -1,0 +1,25 @@
+.GstForm{
+    display: grid!important;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+
+}
+
+.container{
+    width: 90vw!important;
+    height: 97vh!important;
+    border-radius: 0.7rem;    overflow-y: auto;
+}
+
+.DetailContainer{
+    background: #ffe4e4;
+    padding: 10px;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.txt{
+    padding: 10px 10px;
+}
