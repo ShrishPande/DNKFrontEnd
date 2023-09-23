@@ -1,0 +1,35 @@
+.ProductForm{
+    /* padding: 0 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.Container{
+    background: rgb(255, 255, 255);
+    padding: 20px 20px;
+    border-radius: 0.7rem;
+}
+
+@media screen and (max-width: 1200px){
+    .ProductForm{
+        justify-content: flex-start;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .Container{
+        width: 95%;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+    .ProductForm{
+        width: 97vw;
+        align-items: center;
+        justify-content: center;
+        /* margin-left: 10px; */
+    }
+}
