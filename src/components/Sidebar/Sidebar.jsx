@@ -1,13 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import Logo from "../../imgs/logo.png";
 import "./Sidebar.css";
 import { SidebarData } from "../../Data/Data";
 import { UilSignOutAlt, UilBars } from "@iconscout/react-unicons";
 import {motion} from 'framer-motion'
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
     const [selected, setSelected] = useState(0);
     const [expanded, setExpanded] = useState(true);
+    const navigate = useNavigate();
+
+    useEffect(()=>{
+        const userData = JSON.parse(localStorage.getItem("userData"));
+        if(!userData){
+            navigate("/")
+        }
+    })
 
     const sidebarVariants ={
         true:{
@@ -49,7 +58,9 @@ const Sidebar = () => {
                                         : "menuItem"
                                 }
                                 key={index}
-                                onClick={() => setSelected(index)}
+                                onClick={() => {setSelected(index)
+                                    navigate(item.nav)
+                                }}
                             >
                                 <item.icon />
                                 <span>{item.heading}</span>
@@ -57,7 +68,7 @@ const Sidebar = () => {
                         );
                     })}
 
-                    <div className="menuItem">
+                    <div className="menuItem" onClick={()=>localStorage.clear()}>
                         <UilSignOutAlt />
                     </div>
                 </div>
