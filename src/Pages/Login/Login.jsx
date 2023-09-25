@@ -138,6 +138,13 @@ const Login = () => {
   return (
     <div className="loginContainer">
       <div className="loginDetailContainer">
+      <p style={{color:'blue',cursor:'pointer'}}>
+        <a href="http://localhost:3001">
+
+        Explore e-commerece
+        </a>
+        </p>  
+
         {isLoginPage ? (
           <p className="loginText">Login to your Account</p>
         ) : (

@@ -28,7 +28,7 @@ const BussinessPage = () => {
   const submitHandler =async(e)=>{
     console.log("hii")
     e.preventDefault()
-    console.log("hii")
+    // console.log(userData.data.user._doc)
 
     try{
       const config = {
@@ -39,7 +39,7 @@ const BussinessPage = () => {
         };
 
         const response = await axios.post(
-          `http://localhost:5000/business/${userData.data.user._id}`,
+          `http://localhost:5000/business/${userData.data.user._doc._id}`,
           data,
           config
         );
@@ -52,9 +52,9 @@ const BussinessPage = () => {
   }
   }
   return ( 
-    <div className="business">
+    <div className="business" >
         <Main/>
-      <form className="border1 h-[620px] px-[21.3px] pb-6">
+      <form className="border1 h-[620px] px-[21.3px] pb-6" onSubmit={submitHandler}>
         <div className="flex justify-evenly pt-12 ">
           <fieldset className="border border-black mr-5 w-60 h-16  px-4 overflow-hidden rounded-lg ">
             {" "}
@@ -75,7 +75,7 @@ const BussinessPage = () => {
                 style={{ color: "purple" }}
                 class="pt-3 fa-solid fa-circle-exclamation"
               ></i>{" "}
-              <input type="text" naem="GSTIN" onChange={changeHandler}  className="w-48 h-4 py-4 mt-3 border-none" />{" "}
+              <input type="text" name="GSTIN" onChange={changeHandler}  className="w-48 h-4 py-4 mt-3 border-none" />{" "}
             </div>{" "}
           </fieldset>
           <fieldset className="border border-black w-60 mr-5 h-16 px-4 overflow-hidden rounded-lg ">
@@ -129,7 +129,7 @@ const BussinessPage = () => {
           </div>
 
           <div class="group">
-            <input type="text" name="pincode" onChange={changeHandler} required />
+            <input type="text" name="pinCode" onChange={changeHandler} required />
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>Pincode</label>
@@ -146,12 +146,10 @@ const BussinessPage = () => {
 
 
         
-        <button type="submit" className="ml-12 px-14 py-2 text-white bg-blue-500 mt-6 rounded-lg " onSubmit={(e)=>{
-           console.log("hii")
-           e.preventDefault()
-        }}>
+        <button type="submit" className="ml-12 px-14 py-2 text-white bg-blue-500 mt-6 rounded-lg " >
           SAVE / UPDATE
         </button>
+        {/* <button type="submit" onSubmit={submitHandler}>Submit</button> */}
       </form>
     </div>
   );
